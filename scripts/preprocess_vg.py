@@ -3,7 +3,9 @@ from collections import Counter, defaultdict
 
 import numpy as np
 import h5py
-from scipy.misc import imread, imresize
+from skimage.transform import resize as imresize
+from imageio import imread
+
 
 
 """

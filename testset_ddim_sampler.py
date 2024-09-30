@@ -19,14 +19,14 @@ os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 def get_model():
     config = OmegaConf.load("./config_vg.yaml")
-    model = load_model_from_config(config, "./pretrained_model.ckpt")
+    model = load_model_from_config(config, "./sgdiff_epoch_335.ckpt")
     return model
 
 def build_loaders():
     dset_kwargs = {
         'vocab_path': './datasets/vg/vocab.json',
         'h5_path': './datasets/vg/test.h5',
-        'image_dir': './datasets/vg/images',
+        'image_dir': '/kaggle/input/visualgenome-part1-part2',
         'image_size': (256, 256),
         'max_samples': None,
         'max_objects': 30,

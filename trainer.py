@@ -572,10 +572,12 @@ if __name__ == "__main__":
         raise
     finally:
         # move newly created debug project to debug_runs
+        # trainer = Trainer.from_argparse_args(trainer_opt, **trainer_kwargs)
+
         if opt.debug and not opt.resume and trainer.global_rank == 0:
             dst, name = os.path.split(logdir)
             dst = os.path.join(dst, "debug_runs", name)
             os.makedirs(os.path.split(dst)[0], exist_ok=True)
             os.rename(logdir, dst)
-        if trainer.global_rank == 0:
-            print(trainer.profiler.summary())
+        # if trainer.global_rank == 0:
+        #     print(trainer.profiler.summary())

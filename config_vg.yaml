@@ -78,17 +78,17 @@ data:
     train:
       target: ldm.data.vg.VGTrain
       params:
-        vocab: ./datasets/vg/vocab.json
-        h5_path: ./datasets/vg/train.h5
-        image_dir: ./datasets/vg/images
+        vocab: datasets/vg/vocab.json
+        h5_path: datasets/vg/train.h5
+        image_dir: datasets/vg/images
         image_size: 256
         max_objects: 10
     validation:
       target: ldm.data.vg.VGTrain
       params:
-        vocab: ./datasets/vg/vocab.json
-        h5_path: ./datasets/vg/val.h5
-        image_dir: ./datasets/vg/images
+        vocab: datasets/vg/vocab.json
+        h5_path: datasets/vg/val.h5
+        image_dir: datasets/vg/images
         image_size: 256
         max_objects: 10
 

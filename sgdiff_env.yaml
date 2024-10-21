@@ -1,0 +1,4 @@
+name: sgdiff
+channels:
+  - defaults
+prefix: /home/himanshu/miniconda3/envs/sgdiff
